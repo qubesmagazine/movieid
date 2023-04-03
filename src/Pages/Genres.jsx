@@ -25,6 +25,7 @@ export default function Genres() {
     }, 5000);
   }
 
+  // eslint-disable-next-line eqeqeq
   const filterGenreTitle = genres.filter((genre) => genre.id == id);
 
   useEffect(() => {
@@ -42,6 +43,7 @@ export default function Genres() {
       }
     }
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, page]);
 
 
