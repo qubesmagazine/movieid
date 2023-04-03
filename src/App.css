@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+@import url("https://fonts.cdnfonts.com/css/noto-sans-mro");
+
+* {
+  text-decoration: none !important;
+  scroll-behavior: smooth;
+  font-family: "Noto Sans Mro", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #0f1113 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+input,
+.searchResult {
+  width: 60vw;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+input::placeholder {
+  color: #fff !important;
+  opacity: 0.7;
+}
+
+.scrollbody {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbody::-webkit-scrollbar {
+  display: none;
+}
+
+.sideAdjust {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.menu {
+  padding: 5px 10px;
+}
+
+.mediaCard {
+  flex: 0 1 130px;
+}
+
+.cast:hover {
+  opacity: 0.5;
+  transition: 0.4s ease-in;
+  background-color: #171616;
+  padding: 2px;
+  height: 100%;
+}
+
+.outlet {
+  width: 100%;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f1113;
+  z-index: 10;
+  overflow-y: scroll;
+  transition: 0.5s ease-in;
+}
+
+.posterBackDrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.media_poster {
+  width: 80%;
+  height: auto;
+}
+
+.trailerVid {
+  width: 250px;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.trailerVid:hover {
+  background-color: rgb(64, 62, 62);
+  border: 1px solid orange;
+}
+
+.modalbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+.contentBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 4rem;
+}
+
+.reactplayer {
+  width: 100%;
+  height: 100%;
+}
+
+.personImg {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.hover-me:hover {
+  background-color: #626060;
+}
+
+@media (min-width: 1024px) {
+  input,
+  .searchResult {
+    width: 500px !important;
+  }
+
+  .menu:hover {
+    background-color: #1d1c1c;
+    border-radius: 1px;
+    transition: all 0.3s;
+    color: orange;
+  }
+
+  .mediaCard {
+    flex: 0 1 170px;
+  }
+
+  .outlet {
+    width: calc(100% - 200px);
+  }
+
+  .media_poster {
+    width: 300px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 768px) {
+  input,
+  .searchResult {
+    width: 400px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mediaCard {
+    flex: 0 1 160px;
+  }
+
+  .mediaCard:hover {
+    border: 1px solid orange;
+  }
+
+  .media_poster {
+    width: 270px;
+  }
+
+  .contentBox {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
